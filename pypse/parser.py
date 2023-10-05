@@ -93,11 +93,11 @@ pse_parser = Lark(r"""
         | type_bool
         | type_array
         | type_custom
-    type_int: "INT"
+    type_int: "INTEGER"
     type_real: "REAL"
     type_string: "STRING"
-    type_bool: "BOOL"
-    type_array: "ARRAY" "[" type_array_start_index ".." type_array_end_index "]" "OF" type
+    type_bool: "BOOLEAN"
+    type_array: "ARRAY" "[" type_array_start_index ":" type_array_end_index "]" "OF" type
         type_array_start_index: int
         type_array_end_index: int
     type_custom: symbol
